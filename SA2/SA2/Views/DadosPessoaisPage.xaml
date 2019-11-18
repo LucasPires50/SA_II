@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SA2.Views.DadosPessoaisPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Voltar"
+                    Command="{Binding VoltarCommand}"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"/>
+            <Entry Placeholder="Email" Keyboard="Email" Text="{Binding Email}"/>
+            <Entry Placeholder="Confirmação do email" Keyboard="Email" Text="{Binding Confirmacao_Email}"/>
+            <Entry Placeholder="Nome da Mãe" Text="{Binding Nome_Mae}"/>
+            <Entry Placeholder="Profissão" Text="{Binding Profissao}"/>
+
+            <Label Text="Profissão" />
+            <Picker Title="Qual sua Profissão ?" 
+                    ItemsSource="{Binding ClienteModel}" 
+                    ItemDisplayBinding="{Binding Profissao_Model}"
+                    SelectedItem="{Binding Selected_profissao}"/>
+
+            <Label Text="Escolaridade" />
+            <Picker Title="Selecione sua Escolaridade ?" 
+                    ItemsSource="{Binding clientemodels}" 
+                    ItemDisplayBinding="{Binding Escolaridade_Model}"
+                    SelectedItem="{Binding Selected_escolaridade}"/>
+
+            <Label Text="Estado Civil" />
+            <Picker Title="Qual seu Estado Civil ?" 
+                    ItemsSource="{Binding clienteModels}" 
+                    ItemDisplayBinding="{Binding Estado_Civil_Model}"
+                    SelectedItem="{Binding Selected_estado_civil}"/>
+
+
+            <Button Text="Continuar" Command="{Binding ContinuarCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

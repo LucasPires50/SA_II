@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SA2.Views.CadastroUsuarioPage">
+    <ContentPage.Content>
+      <StackLayout>
+            <Button Text="Voltar"
+                    Command="{Binding VoltarCommand}"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="GreenYellow"/>
+            <Entry Placeholder="CPF" Keyboard="Numeric" Text="{Binding Cpf}" />
+            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" Keyboard="Numeric" MaxLength="8"/>
+            <Entry Placeholder="Confirme a senha" Text="{Binding ConfirmacaoSenha}" IsPassword="True" Keyboard="Numeric" />
+            <Button Text="Logar" Command="{Binding ContinuarCommand}" />
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

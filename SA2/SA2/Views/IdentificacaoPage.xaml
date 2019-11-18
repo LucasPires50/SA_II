@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SA2.Views.IdentificacaoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Voltar"
+                    Command="{Binding VoltarCommand}"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"/>
+            <Entry Placeholder="Nome" Text="{Binding Nome}"/>
+
+            <Label Text="Sexo" />
+            <Picker Title="Selecione seu Sexo" 
+                    ItemsSource="{Binding ClienteModel}" 
+                    ItemDisplayBinding="{Binding Sexo_Model}"
+                    SelectedItem="{Binding Selected_sexo}"/>
+
+            <DatePicker x:Name="_data_de_nascimento"
+                        Format="dd/MM/yyyy" 
+                        BindingContext="{x:Reference _data_de_nascimento}" />
+            <Entry Placeholder="Telefone Celular" Keyboard="Telephone" Text="{Binding Telefone_Celular}" />
+            <Button Text="Continuar" Command="{Binding ContinuarCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

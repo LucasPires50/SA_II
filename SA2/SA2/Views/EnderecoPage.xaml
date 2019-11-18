@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SA2.Views.EnderecoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Voltar"
+                    Command="{Binding VoltarCommand}"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"/>
+            <Entry Placeholder="CEP" Keyboard="Numeric" Text="{Binding Cep}" />
+            <Entry Placeholder="Logradouro" Text="{Binding Logradouro}"/>
+            <Entry Placeholder="Bairro" Text="{Binding Bairro}"/>
+
+            <Label Text="Cidade" />
+            <Picker Title="Selecione a Cidade" 
+                    ItemsSource="{Binding clienteModels}" 
+                    ItemDisplayBinding="{Binding Cidade_Model}"
+                    SelectedItem="{Binding selected_cidade}"/>
+
+            <Label Text="UF" />
+            <Picker Title="Selecione a UF" 
+                    ItemsSource="{Binding ClienteModel}" 
+                    ItemDisplayBinding="{Binding Uf_Model}"
+                    SelectedItem="{Binding Selected_UF}"/>
+
+            <Entry Placeholder="Numero" Keyboard="Numeric" Text="{Binding Numero}" />
+            <Entry Placeholder="Complemento" Text="{Binding Complemento}"/>
+            <Button Text="Continuar" Command="{Binding ContinuarCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
