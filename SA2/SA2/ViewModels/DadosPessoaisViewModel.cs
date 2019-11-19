@@ -11,6 +11,13 @@ namespace SA2.ViewModels
 {
     public class DadosPessoaisViewModel : BaseViewModel
     {
+        private string mensagemPessoais;
+        public string MensagemPessoais
+        {
+            get { return mensagemPessoais; }
+            set { SetProperty<string>(ref mensagemPessoais, value); }
+        }
+
         private string _email;
         public string Email
         {
@@ -106,6 +113,8 @@ namespace SA2.ViewModels
 
         public DadosPessoaisViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
+            MensagemPessoais = "Informe os seus dados pessoais";
+
             Cliente = cliente;
 
             Email = "";

@@ -16,20 +16,24 @@ namespace SA2.Models
 
             ClienteModel.Add(new ClienteModel
             {
-                Dia_Vencimento_Fatura_Model = 08
+                Dia_Vencimento_Fatura_Model = 05
             });
 
             ClienteModel.Add(new ClienteModel
             {
-                Dia_Vencimento_Fatura_Model = 16
+                Dia_Vencimento_Fatura_Model = 10
             });
             ClienteModel.Add(new ClienteModel
             {
-                Dia_Vencimento_Fatura_Model = 24
+                Dia_Vencimento_Fatura_Model = 15
             });
             ClienteModel.Add(new ClienteModel
             {
-                Dia_Vencimento_Fatura_Model = 30
+                Dia_Vencimento_Fatura_Model = 20
+            });
+            ClienteModel.Add(new ClienteModel
+            {
+                Dia_Vencimento_Fatura_Model = 25
             });
         }
 

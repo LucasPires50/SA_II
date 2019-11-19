@@ -8,12 +8,18 @@
     <ContentPage.Content>
 
         <StackLayout 
+            
             Orientation="Horizontal"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Start"
-            Padding="-200,-200,-200,-200"
             BackgroundColor="#ff808080">
-
+            <StackLayout>
+                <Button 
+                Text="Voltar"
+                Command="{Binding VoltarCommand}"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Start"/>
+            </StackLayout>
             <StackLayout 
                 Orientation="Vertical"
                 HorizontalOptions="FillAndExpand"
@@ -110,12 +116,21 @@
                    VerticalOptions="Fill"
                    HeightRequest="100"
                    WidthRequest="100"/>
+                <StackLayout>
 
-            </StackLayout>
-            <Button 
+
+                </StackLayout>
+                <Button 
                 Text="Continuar" Command="{Binding ContinuarCommand}"
-                VerticalOptions="EndAndExpand"
-                HorizontalOptions="End"/>
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="450"
+                    HeightRequest="60"
+                    Margin="0,0,-50,30"
+                    BackgroundColor="#21DD11"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

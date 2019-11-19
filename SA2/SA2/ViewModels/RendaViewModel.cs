@@ -11,6 +11,14 @@ namespace SA2.ViewModels
 {
     public class RendaViewModel : BaseViewModel
     {
+
+        private string mensagemRenda;
+        public string MensagemRenda
+        {
+            get { return mensagemRenda; }
+            set { SetProperty<string>(ref mensagemRenda, value); }
+        }
+
         private double _valor_da_renda;
         public double Valor_Da_Renda
         {
@@ -53,6 +61,9 @@ namespace SA2.ViewModels
 
         public RendaViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
+
+            MensagemRenda = "Informe seus dados financeiros";
+
             Cliente = cliente;
 
             Valor_Da_Renda = 0;
