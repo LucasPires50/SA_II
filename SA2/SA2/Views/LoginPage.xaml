@@ -3,14 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SA2.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Voltar"
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Voltar"
                     Command="{Binding VoltarCommand}"
                     VerticalOptions="Start"
                     HorizontalOptions="Start"/>
-            <Entry Placeholder="CPF" Keyboard="Numeric" Text="{Binding Cpf}" />
-            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" Keyboard="Numeric" />
-            <Button Text="Logar" Command="{Binding LogarCommand}" />
-        </StackLayout>
+
+                <Image Source="growth.png"
+                  HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   WidthRequest="300"
+                   HeightRequest="300"
+                   Margin="0,80,0,0"/>
+
+                <Label
+                Text="{Binding MensagemDesBank}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="#FB33FF00"
+                FontSize="50"
+                Margin="0,0,0,60"/>
+
+                <Label
+                    Text="{Binding MensagemDados}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    FontSize="30"
+                    Margin="0,20,0,0"/>
+
+
+                <Entry Placeholder="CPF" Keyboard="Numeric" Text="{Binding Cpf}" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,30,0,0"/>
+                <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" Keyboard="Numeric" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,0,0,30"/>
+
+                <Button Text="Logar" Command="{Binding LogarCommand}" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="450"
+                    HeightRequest="60"
+                    Margin="0,0,0,30"
+                    BackgroundColor="#21DD11"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

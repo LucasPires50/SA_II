@@ -3,24 +3,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SA2.Views.IdentificacaoPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Voltar"
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Voltar"
                     Command="{Binding VoltarCommand}"
                     VerticalOptions="Start"
                     HorizontalOptions="Start"/>
-            <Entry Placeholder="Nome" Text="{Binding Nome}"/>
 
-            <Label Text="Sexo" />
-            <Picker Title="Selecione seu Sexo" 
+                <Image Source="businessman.png"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   WidthRequest="250"
+                   HeightRequest="250"
+                   Margin="0,80,0,0"/>
+
+                <Label
+                Text="{Binding MensagemIdentificacao}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                    Margin="0,20,0,0"/>
+
+                <Label
+                Text="{Binding MensagemIdentificacao2}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                    Margin="0,0,0,0"/>
+
+                <Entry Placeholder="Nome" Text="{Binding Nome}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,30,0,0"/>
+
+                <Picker Title="Selecione seu Sexo" 
                     ItemsSource="{Binding ClienteModel}" 
                     ItemDisplayBinding="{Binding Sexo_Model}"
-                    SelectedItem="{Binding Selected_sexo}"/>
+                    SelectedItem="{Binding Selected_sexo}"
+                    HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,10,0,0"/>
 
-            <DatePicker x:Name="_data_de_nascimento"
+                <DatePicker x:Name="_data_de_nascimento"
                         Format="dd/MM/yyyy" 
-                        BindingContext="{x:Reference _data_de_nascimento}" />
-            <Entry Placeholder="Telefone Celular" Keyboard="Telephone" Text="{Binding Telefone_Celular}" />
-            <Button Text="Continuar" Command="{Binding ContinuarCommand}" />
-        </StackLayout>
+                        BindingContext="{x:Reference _data_de_nascimento}" 
+                        HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,10,0,0"/>
+
+                <Entry Placeholder="Telefone Celular" Keyboard="Telephone" Text="{Binding Telefone_Celular}" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,10,0,0"/>
+
+                <Button Text="Continuar" Command="{Binding ContinuarCommand}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="450"
+                    HeightRequest="60"
+                    Margin="0,0,0,30"
+                    BackgroundColor="#21DD11"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

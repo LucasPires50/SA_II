@@ -811,21 +811,15 @@ E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\SA2.Android.csprojA
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\stamp\_BuildLibraryImportsCache.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\resourcepaths.cache
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\res.flag
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\ea2491c960f2b73e0b29f505388902dca1bb5ed5.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\5d071ae3694eba3da71e146fc8cb7ee79281d90a.stamp
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\855a0b776aac1d5e85e7556945e6d72c9aecde96.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\6ddde9079a72cd517d53baad0966c632aabede19.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\a1559a7b3c8cfeefb626b7f705f8a14f403314a4.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\de405f99fb01b30ade5cc1841f8763e5de4ac037.stamp
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\53a14f65979b065522feeb1614febb6a928ebd38.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\faf5fee4b5775bca36d5b7c4277f2b17d89d783a.stamp
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\ea2491c960f2b73e0b29f505388902dca1bb5ed5.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\5d071ae3694eba3da71e146fc8cb7ee79281d90a.flata
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\855a0b776aac1d5e85e7556945e6d72c9aecde96.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\6ddde9079a72cd517d53baad0966c632aabede19.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\a1559a7b3c8cfeefb626b7f705f8a14f403314a4.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\de405f99fb01b30ade5cc1841f8763e5de4ac037.flata
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\53a14f65979b065522feeb1614febb6a928ebd38.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\faf5fee4b5775bca36d5b7c4277f2b17d89d783a.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\compiled.flata
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\R.txt
@@ -2124,3 +2118,18 @@ C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2.Android\obj\Debug\81\stamp\_CopyPdbFiles.
 C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2.Android\obj\Debug\81\stamp\_GenerateJavaStubs.stamp
 C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2.Android\obj\Debug\81\stamp\_ResolveLibraryProjectImports.stamp
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\61bc76c407afd04efe3ad174dee4ec22cf9da01f.stamp
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\8d44d3436f750405784b09aee98b53c5852d0feb.stamp
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\d0e3c55048b8837968eedf64b5bfd92aae0886a1.stamp
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\61bc76c407afd04efe3ad174dee4ec22cf9da01f.flata
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\8d44d3436f750405784b09aee98b53c5852d0feb.flata
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\flata\d0e3c55048b8837968eedf64b5bfd92aae0886a1.flata
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\res\xml\file_paths.xml
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\linksrc\Plugin.CurrentActivity.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\linksrc\Plugin.Media.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\linksrc\Plugin.Permissions.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\android\assets\Plugin.CurrentActivity.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\android\assets\Plugin.Media.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\android\assets\Plugin.Permissions.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\android\src\md52784b6b6564df579ab09ba8bad5c54dd\ActivityLifecycleContextListener.java
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\android\src\md54cd65ac53ae710bff80022afc423e0f3\MediaPickerActivity.java

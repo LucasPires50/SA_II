@@ -14,6 +14,20 @@ namespace SA2.ViewModels
 
         DateTime dataNascimentoMinima = DateTime.Now.AddYears(-18);
 
+        private string mensagemIdentificacao;
+        public string MensagemIdentificacao
+        {
+            get { return mensagemIdentificacao; }
+            set { SetProperty<string>(ref mensagemIdentificacao, value); }
+        }
+
+        private string mensagemIdentificacao2;
+        public string MensagemIdentificacao2
+        {
+            get { return mensagemIdentificacao2; }
+            set { SetProperty<string>(ref mensagemIdentificacao2, value); }
+        }
+
         private string _nome;
         public string Nome
         {
@@ -64,6 +78,9 @@ namespace SA2.ViewModels
         public ICommand ContinuarCommand { get; }
         public IdentificacaoViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
+            MensagemIdentificacao = "Queremos lhe conhecer melhor, por favor";
+            MensagemIdentificacao2 = "informe os dados nos campos abaixo";
+
             Cliente = cliente;
 
             Nome = "";

@@ -10,6 +10,14 @@ namespace SA2.ViewModels
 {
     public class CadastroUsuarioPageViewModel : BaseViewModel
     {
+
+        private string mensagemInforme;
+        public string MensagemInforme
+        {
+            get { return mensagemInforme; }
+            set { SetProperty<string>(ref mensagemInforme, value); }
+        }
+
         private string _cpf;
         public string Cpf
         {
@@ -81,6 +89,8 @@ namespace SA2.ViewModels
         }
         private async void ExecuteContinuarCommand()
         {
+            MensagemInforme = "Informe seu CPF e crie uma senha";
+
             ClienteModel cliente = new ClienteModel();
 
             cliente.CPF_Model = Cpf;

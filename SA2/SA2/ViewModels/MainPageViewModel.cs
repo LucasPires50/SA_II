@@ -18,6 +18,13 @@ namespace SA2.ViewModels
             set { SetProperty<string>(ref mensagem, value); }
         }
 
+        private string mensagemDesBank;
+        public string MensagemDesBank
+        {
+            get { return mensagemDesBank; }
+            set { SetProperty<string>(ref mensagemDesBank, value); }
+        }
+
         private ImageSource _foto;
         public ImageSource Foto
         {
@@ -37,6 +44,7 @@ namespace SA2.ViewModels
         {
 
             Mensagem = "Bem Vindo!";
+            MensagemDesBank = "DesBank";
 
             EntrarCommand = new Command(ExecuteEntrarCommand);
             CadastrarCommand = new Command(ExecuteCadastrarCommand);
@@ -80,13 +88,13 @@ namespace SA2.ViewModels
         private async void ExecuteEntrarCommand()
         {
             LoginPage page = new LoginPage();
-            await _navigation.PushAsync(page);
+            await _navigation.PushModalAsync(page);
         }
 
         private async void ExecuteCadastrarCommand()
         {
             CadastroUsuarioPage page = new CadastroUsuarioPage(Cliente);
-            await _navigation.PushAsync(page);
+            await _navigation.PushModalAsync(page);
         }
 
         private async void ExecuteContinuarCommand()

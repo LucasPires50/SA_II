@@ -11,6 +11,13 @@ namespace SA2.ViewModels
 {
     public class DocumentoViewModel : BaseViewModel
     {
+        private string mensagemDocumento;
+        public string MensagemDocumento
+        {
+            get { return mensagemDocumento; }
+            set { SetProperty<string>(ref mensagemDocumento, value); }
+        }
+
         private string _rg;
         public string RG
         {
@@ -69,6 +76,8 @@ namespace SA2.ViewModels
 
         public DocumentoViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
+            MensagemDocumento = "Informe os seus dados documentais";
+
             Cliente = cliente;
 
             RG = "";

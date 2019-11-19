@@ -10,6 +10,21 @@ namespace SA2.ViewModels
 {
     public class LoginPageViewModel : BaseViewModel
     {
+
+        private string mensagemDesBank;
+        public string MensagemDesBank
+        {
+            get { return mensagemDesBank; }
+            set { SetProperty<string>(ref mensagemDesBank, value); }
+        }
+
+        private string mensagemDados;
+        public string MensagemDados
+        {
+            get { return mensagemDados; }
+            set { SetProperty<string>(ref mensagemDados, value); }
+        }
+
         private string _cpf;
         public string Cpf
         {
@@ -28,7 +43,10 @@ namespace SA2.ViewModels
 
         public LoginPageViewModel(Page pagina) : base(pagina)
         {
-            
+
+            MensagemDesBank = "DesBank";
+            MensagemDados = "Insira seus dados";
+
             Cpf = "";
             Senha = "";
             LogarCommand = new Command(ExecuteLogarCommand);

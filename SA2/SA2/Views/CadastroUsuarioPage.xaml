@@ -3,16 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SA2.Views.CadastroUsuarioPage">
     <ContentPage.Content>
-      <StackLayout>
-            <Button Text="Voltar"
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Voltar"
                     Command="{Binding VoltarCommand}"
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="Fill"
                     BackgroundColor="GreenYellow"/>
-            <Entry Placeholder="CPF" Keyboard="Numeric" Text="{Binding Cpf}" />
-            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" Keyboard="Numeric" MaxLength="8"/>
-            <Entry Placeholder="Confirme a senha" Text="{Binding ConfirmacaoSenha}" IsPassword="True" Keyboard="Numeric" />
-            <Button Text="Logar" Command="{Binding ContinuarCommand}" />
-        </StackLayout>
-  </ContentPage.Content>
+
+                <Image Source="padlock.png"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   WidthRequest="250"
+                   HeightRequest="250"
+                   Margin="0,80,0,0"/>
+
+                <Label
+                Text="{Binding MensagemInforme}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    FontSize="15"
+                    Margin="0,20,0,0"/>
+
+                <Entry Placeholder="CPF" Keyboard="Numeric" Text="{Binding Cpf}" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,30,0,0"/>
+                <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" Keyboard="Numeric" MaxLength="8"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,0,0,0"/>
+                <Entry Placeholder="Confirme a senha" Text="{Binding ConfirmacaoSenha}" IsPassword="True" Keyboard="Numeric" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="20"
+                   WidthRequest="450"
+                   HeightRequest="50"
+                   Margin="0,0,0,0"/>
+                <Button Text="Continuar" Command="{Binding ContinuarCommand}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="450"
+                    HeightRequest="60"
+                    Margin="0,0,0,30"
+                    BackgroundColor="#21DD11"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

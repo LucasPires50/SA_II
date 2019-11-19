@@ -11,6 +11,20 @@ namespace SA2.ViewModels
 {
     public class EnderecoViewModel : BaseViewModel
     {
+        private string mensagemEndereco;
+        public string MensagemEndereco
+        {
+            get { return mensagemEndereco; }
+            set { SetProperty<string>(ref mensagemEndereco, value); }
+        }
+
+        private string mensagemEndereco2;
+        public string MensagemEndereco2
+        {
+            get { return mensagemEndereco2; }
+            set { SetProperty<string>(ref mensagemEndereco2, value); }
+        }
+
         private string _cep;
         public string Cep
         {
@@ -97,6 +111,9 @@ namespace SA2.ViewModels
         public ICommand ContinuarCommand { get; }
         public EnderecoViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
+            MensagemEndereco = "Informe seu endereço, isso nos";
+            MensagemEndereco2 = "ajudará na análise de crédito";
+
             Cliente = cliente;
 
             Cep = "";

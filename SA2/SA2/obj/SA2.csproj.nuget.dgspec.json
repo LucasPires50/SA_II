@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luc_5\\Desktop\\SA2 (3)\\SA2\\SA2\\SA2.csproj": {}
+    "E:\\Arquivos_Versionados_GIT\\SA2\\SA2\\SA2\\SA2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luc_5\\Desktop\\SA2 (3)\\SA2\\SA2\\SA2.csproj": {
+    "E:\\Arquivos_Versionados_GIT\\SA2\\SA2\\SA2\\SA2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luc_5\\Desktop\\SA2 (3)\\SA2\\SA2\\SA2.csproj",
+        "projectUniqueName": "E:\\Arquivos_Versionados_GIT\\SA2\\SA2\\SA2\\SA2.csproj",
         "projectName": "SA2",
-        "projectPath": "C:\\Users\\Luc_5\\Desktop\\SA2 (3)\\SA2\\SA2\\SA2.csproj",
+        "projectPath": "E:\\Arquivos_Versionados_GIT\\SA2\\SA2\\SA2\\SA2.csproj",
         "packagesPath": "C:\\Users\\Luc_5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luc_5\\Desktop\\SA2 (3)\\SA2\\SA2\\obj\\",
+        "outputPath": "E:\\Arquivos_Versionados_GIT\\SA2\\SA2\\SA2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

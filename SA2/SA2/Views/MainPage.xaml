@@ -3,18 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SA2.Views.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Image Source="growth.png"
-                  />
-            <Label 
+        <ScrollView>
+            <StackLayout>
+                <Image Source="growth.png"
+                  HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   WidthRequest="300"
+                   HeightRequest="300"
+                   Margin="0,80,0,0"/>
+
+                <Label
+                Text="{Binding MensagemDesBank}"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#FB33FF00"
+                FontSize="50"
+                />
+                <Label 
                 Text="{Binding Mensagem}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            
-                   
-            <Button x:Name="bntEntar" Text="Entrar" Command="{Binding EntrarCommand}" />
-            <Button x:Name="btnCadastrar" Text="Cadastrar" Command="{Binding CadastrarCommand}" />
-            
-        </StackLayout>
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand"
+                Font="25"
+                />
+
+
+                <Button x:Name="bntEntar" Text="Entrar" Command="{Binding EntrarCommand}" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="25"
+                    WidthRequest="450"
+                    HeightRequest="60"
+                    Margin="0,120,0,0"
+                    BackgroundColor="#21DD11"/>
+                <Button x:Name="btnCadastrar" Text="Cadastrar" Command="{Binding CadastrarCommand}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#21DD11"
+                    Font="25"
+                    BorderRadius="3"
+                    BorderWidth="3"
+                    BorderColor="#21DD11"
+                    WidthRequest="450"
+                    HeightRequest="60"
+                    Margin="0,0,0,40"
+                    BackgroundColor="#FFFFFF"/>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
