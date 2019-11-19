@@ -41,7 +41,7 @@ namespace SA2.ViewModels
 
         public ICommand LogarCommand { get; }
 
-        public LoginPageViewModel(Page pagina) : base(pagina)
+        public LoginPageViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
 
             MensagemDesBank = "DesBank";
@@ -69,12 +69,19 @@ namespace SA2.ViewModels
 
             }
 
+            if (Senha.Length < 4)
+            {
+                _pagina.DisplayAlert("Atenção", "Senha deve ter 4 caracteres", "Ok");
+                return false;
+
+            }
+
             return true;
         }
 
             private async void ExecuteLogarCommand()
         {
-            IdentificacaoPage page = new IdentificacaoPage(Cliente);
+            ConcluidoPage page = new ConcluidoPage(Cliente);
 
             if (Dados_Validados())
             {

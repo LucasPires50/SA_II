@@ -65,9 +65,9 @@ namespace SA2.ViewModels
 
             }
 
-            if (Senha.Length < 8)
+            if (Senha.Length < 4)
             {
-                _pagina.DisplayAlert("Atenção", "Senha deve ter 8 caracteres", "Ok");
+                _pagina.DisplayAlert("Atenção", "Senha deve ter 4 caracteres", "Ok");
                 return false;
 
             }

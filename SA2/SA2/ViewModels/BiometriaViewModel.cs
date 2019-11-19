@@ -12,6 +12,13 @@ namespace SA2.ViewModels
 {
     public class BiometriaViewModel : BaseViewModel
     {
+        private string mensagemDigitalizar;
+        public string MensagemDigitalizar
+        {
+            get { return mensagemDigitalizar; }
+            set { SetProperty<string>(ref mensagemDigitalizar, value); }
+        }
+
         private ImageSource _selfie;
         public ImageSource Selfie
         {
@@ -40,6 +47,38 @@ namespace SA2.ViewModels
             set { SetProperty<ImageSource>(ref _valor_da_renda, value); }
         }
 
+        private bool Dados_Validados()
+        {
+            if (Selfie != null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "OK");
+                return false;
+
+            }
+
+            if (Rg_Ou_CNH != null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "Ok");
+                return false;
+
+            }
+
+            if (Comprovante_Residencia != null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "Ok");
+                return false;
+
+            }
+            if (Valor_Da_Renda != null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "Ok");
+                return false;
+
+            }
+
+            return true;
+        }
+
         public ICommand ContinuarCommand { get; }
 
         public ICommand TirarFoto { get; }
@@ -51,7 +90,7 @@ namespace SA2.ViewModels
         public ICommand TirarFotoValor_Da_Renda { get; }
         public BiometriaViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
-
+            MensagemDigitalizar = "Vamos digitalizar seus documentos";
 
             Cliente = cliente;
 
@@ -77,8 +116,18 @@ namespace SA2.ViewModels
             cliente.Comprovante_Residencia_Model = Comprovante_Residencia;
             cliente.Valor_Renda_Model = Valor_Da_Renda;
 
-            ConcluidoPage page = new ConcluidoPage();
-            await _navigation.PushModalAsync(page);
+            ConcluidoPage page = new ConcluidoPage(cliente);
+
+            if (Dados_Validados())
+            {
+
+
+                Selfie = "";
+                Rg_Ou_CNH = "";
+                Comprovante_Residencia = "";
+                Valor_Da_Renda = "";
+                await _navigation.PushModalAsync(page);
+            }
 
         }
         public ICommand VoltarCommand { get; }

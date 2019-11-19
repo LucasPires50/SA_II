@@ -108,6 +108,55 @@ namespace SA2.ViewModels
             }
         }
 
+        private bool Dados_Validados()
+        {
+            if (String.IsNullOrEmpty(Email))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo Email", "Ok");
+                return false;
+
+            }
+
+            if (String.IsNullOrEmpty(Confirmacao_Email))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo Confirmacao Email", "Ok");
+                return false;
+
+            }
+
+            if (Email != Confirmacao_Email)
+            {
+                _pagina.DisplayAlert("Atenção", "O e-mail e a confirmação do e-mail devem ser iguais", "Ok");
+                return false;
+            }
+
+
+            if (String.IsNullOrEmpty(Nome_Mae))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo Nome da Mãe", "Ok");
+                return false;
+            }
+
+            /*if (String.IsNullOrEmpty(Profissao))
+            {
+                _pagina.DisplayAlert("Atenção", "Selecione sua profissão", "Ok");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(Escolaridade))
+            {
+                _pagina.DisplayAlert("Atenção", "Selecione sua escolaridade", "Ok");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(Estado_Civil))
+            {
+                _pagina.DisplayAlert("Atenção", "Selecione sue estado civil", "Ok");
+                return false;
+            }*/
+            return true;
+        }
+
 
         public ICommand ContinuarCommand { get; }
 
@@ -123,17 +172,6 @@ namespace SA2.ViewModels
             Profissao = "";
             Escolaridade = "";
             Estado_Civil = "";
-
-           /*var Escolaridade_picker = new List<string>();
-            Escolaridade_picker.Add("Ensino Fundamental");
-            Escolaridade_picker.Add("Ensino Fundamental Incompleto");
-            Escolaridade_picker.Add("Ensino Médio");
-            Escolaridade_picker.Add("Ensino Médio Incompleto");
-            Escolaridade_picker.Add("Ensino Superior");
-            Escolaridade_picker.Add("Ensino Superior Incompleto");
-
-            var picker_escolaridade = new Picker { Title = "Escolaridade" };
-            picker_escolaridade.ItemsSource = Escolaridade;*/
 
             ContinuarCommand = new Command(ExecuteContinuarCommand);
             VoltarCommand = new Command(ExecuteVoltarCommand);
@@ -152,7 +190,19 @@ namespace SA2.ViewModels
             cliente.Estado_Civil_Model = Estado_Civil;
 
             RendaPage page = new RendaPage(Cliente);
-            await _navigation.PushModalAsync(page);
+
+            if (Dados_Validados())
+            {
+
+
+                Email = "";
+                Confirmacao_Email = "";
+                Nome_Mae = "";
+                Profissao = "";
+                Escolaridade = "";
+                Estado_Civil = "";
+                await _navigation.PushModalAsync(page);
+            }
         }
 
         public ICommand VoltarCommand { get; }

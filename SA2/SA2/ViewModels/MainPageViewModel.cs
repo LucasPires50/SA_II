@@ -87,7 +87,7 @@ namespace SA2.ViewModels
        
         private async void ExecuteEntrarCommand()
         {
-            LoginPage page = new LoginPage();
+            LoginPage page = new LoginPage(Cliente);
             await _navigation.PushModalAsync(page);
         }
 
@@ -105,7 +105,7 @@ namespace SA2.ViewModels
 
         private async void ExecuteVoltarCommand()
         {
-            ConcluidoPage page = new ConcluidoPage();
+            ConcluidoPage page = new ConcluidoPage(Cliente);
             await _navigation.PushModalAsync(page);
         }
     }

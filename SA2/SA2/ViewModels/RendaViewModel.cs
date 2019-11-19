@@ -56,6 +56,31 @@ namespace SA2.ViewModels
                 }
             }
         }
+        private bool Dados_Validados()
+        {
+            if (Valor_Da_Renda > 0)
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo valor da renda", "OK");
+                return false;
+
+            }
+
+            if (Valor_Limite_Desejado > 0)
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo limite desejado", "Ok");
+                return false;
+
+            }
+
+            if (Dia_Vencimento_Fatura != 0)
+            {
+                _pagina.DisplayAlert("Atenção", "Escolha uma data de vencimento", "Ok");
+                return false;
+
+            }
+
+            return true;
+        }
 
         public ICommand ContinuarCommand { get; }
 
@@ -82,7 +107,15 @@ namespace SA2.ViewModels
             cliente.Dia_Vencimento_Fatura_Model = Dia_Vencimento_Fatura;
 
             BiometriaPage page = new BiometriaPage(Cliente);
-            await _navigation.PushModalAsync(page);
+
+            if (Dados_Validados())
+            {
+
+                Valor_Da_Renda = 0;
+                Valor_Limite_Desejado = 0;
+                Dia_Vencimento_Fatura = 0;
+                await _navigation.PushModalAsync(page);
+            }
         }
 
         public ICommand VoltarCommand { get; }

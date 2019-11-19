@@ -1,4 +1,5 @@
-﻿using SA2.ViewModels;
+﻿using SA2.Models;
+using SA2.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,10 @@ namespace SA2.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
 	{
-		public LoginPage ()
+		public LoginPage (ClienteModel cliente)
 		{
 			InitializeComponent ();
-            BindingContext = new LoginPageViewModel(this);
+            BindingContext = new LoginPageViewModel(this, cliente);
 		}
 	}
 }

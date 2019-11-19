@@ -5,132 +5,137 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SA2.Views.BiometriaPage">
-    <ContentPage.Content>
+    <Grid>
 
-        <StackLayout 
-            
-            Orientation="Horizontal"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="Start"
-            BackgroundColor="#ff808080">
-            <StackLayout>
-                <Button 
+        <!--Definir as linhas-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Definir as colunas-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button 
                 Text="Voltar"
                 Command="{Binding VoltarCommand}"
                 VerticalOptions="StartAndExpand"
-                HorizontalOptions="Start"/>
-            </StackLayout>
-            <StackLayout 
-                Orientation="Vertical"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start"
-                Padding="100,100,100,100"
-                BackgroundColor="#ff808080">
-                <Button 
+                HorizontalOptions="Start"
+               Grid.ColumnSpan="4"
+               Grid.Row="0"/>
+
+        <Label
+            Text="{Binding MensagemDigitalizar}"
+                HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Margin="0,50,0,0"
+            FontSize="20"
+            TextColor="Black"
+            LineBreakMode="NoWrap"
+               Grid.ColumnSpan="4"
+               Grid.Row="0"/>
+
+        <Button 
                     Text="Selfie"
                     Command="{Binding TirarFoto}"
-                    VerticalOptions="StartAndExpand"
+                Grid.Row="2"
                     HorizontalOptions="Center"
-                    BorderWidth="100"
-                    BorderRadius="5"
-                    WidthRequest="100"
-                    HeightRequest="50"
-                    Margin="0,30,0,0"
-                    BackgroundColor="#d14eff00"/>
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#21DD11"/>
 
-                <Button 
+        <Button 
                     Text="RG/CNH"
                     Command="{Binding TirarFotoRG_CNH}"
-                    VerticalOptions="StartAndExpand"
+                Grid.Row="3"
                     HorizontalOptions="Center"
-                    BorderWidth="100"
-                    BorderRadius="5"
-                    WidthRequest="100"
-                    HeightRequest="50"
-                    Margin="0,30,0,0"
-                    BackgroundColor="#d14eff00"/>
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#21DD11"/>
 
-                <Button 
-                    Text="Comprovante de Residência"
-                    Command="{Binding TirarFoto}"
-                    VerticalOptions="StartAndExpand"
+        <Button 
+                    Text="Residência"
+                    Command="{Binding TirarFotoComprovante_Residencia}"
+                Grid.Row="4"
                     HorizontalOptions="Center"
-                    BorderWidth="100"
-                    BorderRadius="5"
-                    WidthRequest="100"
-                    HeightRequest="50"
-                    Margin="0,30,0,0"
-                    BackgroundColor="#d14eff00"/>
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#21DD11"/>
 
-                <Button 
-                    Text="Comprovante de renda"
-                    Command="{Binding TirarFoto}"
-                    VerticalOptions="StartAndExpand"
+        <Button 
+                    Text="Renda"
+                    Command="{Binding TirarFotoValor_Da_Renda}"
+                Grid.Row="5"
                     HorizontalOptions="Center"
-                    BorderWidth="100"
-                    BorderRadius="5"
-                    WidthRequest="100"
-                    HeightRequest="50"
-                    Margin="0,30,0,0"
-                    BackgroundColor="#d14eff00"/>
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"
+                    Font="20"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#21DD11"/>
 
-            </StackLayout>
-            <StackLayout 
-                Orientation="Vertical"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start"
-                Padding="100,100,100,100"
-                BackgroundColor="#ff808080">
-                <Image 
+        <Image 
                    x:Name="Selfie"
                    Source="{Binding Selfie}"
                    Aspect="AspectFit"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill"
-                   HeightRequest="100"
-                   WidthRequest="100"/>
+                Grid.Row="2"
+                Grid.Column="2"/>
 
-                <Image 
+        <Image 
                    x:Name="Rg_Cnh"
                    Source="{Binding Rg_Ou_CNH}"
                    Aspect="AspectFit"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill"
-                   HeightRequest="100"
-                   WidthRequest="100"/>
+                Grid.Row="3"
+                Grid.Column="2"/>
 
-                <Image 
+        <Image 
                    x:Name="Comprovante_Residencia"
                    Source="{Binding Comprovante_Residencia}"
                    Aspect="AspectFit"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill"
-                   HeightRequest="100"
-                   WidthRequest="100"/>
+                Grid.Row="4"
+                Grid.Column="2"/>
 
-                <Image 
+        <Image 
                    x:Name="Valor_Da_Renda"
                    Source="{Binding Valor_Da_Renda}"
                    Aspect="AspectFit"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill"
-                   HeightRequest="100"
-                   WidthRequest="100"/>
-                <StackLayout>
+                Grid.Row="5"
+                Grid.Column="2"/>
 
-
-                </StackLayout>
-                <Button 
+        <Button 
                 Text="Continuar" Command="{Binding ContinuarCommand}"
+            Grid.Row="6"
+            Grid.ColumnSpan="4"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"
                     TextColor="White"
                     Font="20"
                     WidthRequest="450"
                     HeightRequest="60"
-                    Margin="0,0,-50,30"
+                    Margin="0,0,0,30"
                     BackgroundColor="#21DD11"/>
-            </StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
+
+    </Grid>
 </ContentPage>

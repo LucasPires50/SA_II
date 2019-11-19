@@ -71,6 +71,42 @@ namespace SA2.ViewModels
             set { SetProperty<DateTime>(ref _data_emissao, value); }
         }
 
+        private bool Dados_Validados()
+        {
+            if (String.IsNullOrEmpty(RG))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo do RG", "OK");
+                return false;
+
+            }
+
+            if (String.IsNullOrEmpty(CNH))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo do CNH", "Ok");
+                return false;
+
+            }
+
+            if (String.IsNullOrEmpty(Orgao_Emissor))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo Orgão Emissor", "Ok");
+                return false;
+
+            }
+            /*if (String.IsNullOrEmpty(UF))
+            {
+                _pagina.DisplayAlert("Atenção", "Selecione a UF", "Ok");
+                return false;
+            }*/
+
+            if (Data_Emissao >= DateTime.Now)
+            {
+                _pagina.DisplayAlert("Atenção", "Data superour a atual", "Ok");
+                return false;
+            }
+            return true;
+        }
+
 
         public ICommand ContinuarCommand { get; }
 
@@ -101,7 +137,19 @@ namespace SA2.ViewModels
             cliente.Data_Emissao_Model = Data_Emissao;
 
             DadosPessoaisPage page = new DadosPessoaisPage(Cliente);
-            await _navigation.PushModalAsync(page);
+
+
+            if (Dados_Validados())
+            {
+
+
+                RG = "";
+                CNH = "";
+                Orgao_Emissor = "";
+                UF = "";
+                Data_Emissao = DateTime.Now;
+                await _navigation.PushModalAsync(page);
+            }
         }
 
         public ICommand VoltarCommand { get; }

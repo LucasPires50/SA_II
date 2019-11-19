@@ -1,4 +1,5 @@
-﻿using SA2.Views;
+﻿using SA2.Models;
+using SA2.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace SA2.ViewModels
         }
         public ICommand ContinuarCommand { get; }
 
-        public ConcluidoViewModel(Page pagina) : base(pagina)
+        public ConcluidoViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
             Mensagem_Concluido = "Seu cadastro foi enviado, aguarde!";
             ContinuarCommand = new Command(ExecuteContinuarCommand);
@@ -33,7 +34,7 @@ namespace SA2.ViewModels
         public ICommand VoltarCommand { get; }
         private async void ExecuteVoltarCommand()
         {
-            BiometriaPage page = new BiometriaPage(Cliente);
+            LoginPage page = new LoginPage(Cliente);
             await _navigation.PushModalAsync(page);
         }
     }

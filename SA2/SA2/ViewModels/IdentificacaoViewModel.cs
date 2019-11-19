@@ -75,6 +75,37 @@ namespace SA2.ViewModels
             set { SetProperty<string>(ref _telefone_celular, value); }
         }
 
+        private bool Dados_Validados()
+        {
+            if (String.IsNullOrEmpty(Nome))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo nome", "OK");
+                return false;
+
+            }
+
+            /*if (String.IsNullOrEmpty(Sexo))
+            {
+                _pagina.DisplayAlert("Atenção", "Escolha um opção", "Ok");
+                return false;
+
+            }*/
+
+            if (String.IsNullOrEmpty(Telefone_Celular))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo telefone", "Ok");
+                return false;
+
+            }
+            if (Data_De_Nascimento == dataNascimentoMinima)
+            {
+                _pagina.DisplayAlert("Atenção","Tem que maior de idade","Ok");
+                return false;
+            }
+
+            return true;
+        }
+
         public ICommand ContinuarCommand { get; }
         public IdentificacaoViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
@@ -101,7 +132,19 @@ namespace SA2.ViewModels
             cliente.Telefone_Celular_Model = Telefone_Celular;
 
             EnderecoPage page = new EnderecoPage(Cliente);
-            await _navigation.PushModalAsync(page);
+
+
+            if (Dados_Validados())
+            {
+
+
+                Nome = "";
+                Sexo = "";
+                Data_De_Nascimento = _data_de_nascimento.Date;
+                Telefone_Celular = "";
+                await _navigation.PushModalAsync(page);
+            }
+
         }
 
         public ICommand VoltarCommand { get; }

@@ -108,6 +108,54 @@ namespace SA2.ViewModels
             set { SetProperty<string>(ref _complemento, value); }
         }
 
+        private bool Dados_Validados()
+        {
+            if (String.IsNullOrEmpty(Cep))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo CEP", "OK");
+                return false;
+
+            }
+
+            if (String.IsNullOrEmpty(Logradouro))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo Logradouro", "Ok");
+                return false;
+
+            }
+
+            if (String.IsNullOrEmpty(Bairro))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo Bairro", "Ok");
+                return false;
+
+            }
+           /* if (String.IsNullOrEmpty(Cidade))
+            {
+                _pagina.DisplayAlert("Atenção", "Selecione sua cidade", "Ok");
+                return false;
+            }
+
+            if (String.IsNullOrEmpty(UF))
+            {
+                _pagina.DisplayAlert("Atenção", "Selecione sua a UF", "Ok");
+                return false;
+            }*/
+
+            if (String.IsNullOrEmpty(Numero))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo número", "Ok");
+               return false;
+            }
+
+            if (String.IsNullOrEmpty(Complemento))
+            {
+                _pagina.DisplayAlert("Atenção", "Preencha o campo complemento", "Ok");
+                return false;
+            }
+            return true;
+        }
+
         public ICommand ContinuarCommand { get; }
         public EnderecoViewModel(Page pagina, ClienteModel cliente) : base(pagina)
         {
@@ -140,7 +188,22 @@ namespace SA2.ViewModels
             cliente.Complemento_Model = Complemento;
 
             DocumentoPage page = new DocumentoPage(Cliente);
-            await _navigation.PushModalAsync(page);
+
+
+            if (Dados_Validados())
+            {
+
+
+                Cep = "";
+                Logradouro = "";
+                Bairro = "";
+                Cidade = "";
+                UF = "";
+                Numero = "";
+                Complemento = "";
+                await _navigation.PushModalAsync(page);
+            }
+
         }
 
         public ICommand VoltarCommand { get; }

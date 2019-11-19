@@ -14,10 +14,10 @@ namespace SA2.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConcluidoPage : ContentPage
     {
-        public ConcluidoPage()
+        public ConcluidoPage(ClienteModel cliente)
         {
             InitializeComponent();
-            BindingContext = new ConcluidoViewModel(this);
+            BindingContext = new ConcluidoViewModel(this, cliente);
         }
     }
 }
