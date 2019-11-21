@@ -65,7 +65,7 @@
 
                 <DatePicker x:Name="Data_Emissao"
                         Format="dd/MM/yyyy" 
-                        BindingContext="{x:Reference Data_Emissao}" 
+                        Date="{Binding Data_Emissao}" 
                         HorizontalOptions="Center"
                    VerticalOptions="CenterAndExpand"
                    FontSize="20"

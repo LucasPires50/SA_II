@@ -72,7 +72,7 @@ namespace SA2.ViewModels
 
             }
 
-            if (string.IsNullOrEmpty(Dia_Vencimento_Fatura))
+            if (Selected_vencimento == null)
             {
                 _pagina.DisplayAlert("Atenção", "Escolha uma data de vencimento", "Ok");
                 return false;

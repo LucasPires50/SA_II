@@ -34,25 +34,6 @@ C:\Users\a\Downloads\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInfo.cs
 C:\Users\a\Downloads\SA2\SA2\SA2\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\a\Downloads\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.dll
 C:\Users\a\Downloads\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.pdb
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.deps.json
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.dll
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.pdb
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\App.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\BiometriaPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\CadastroUsuarioPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\ConcluidoPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\DadosPessoaisPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\DocumentoPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\EnderecoPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\IdentificacaoPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\RendaPage.xaml.g.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInfoInputs.cache
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInfo.cs
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\XamlC.stamp
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.dll
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.pdb
 C:\Users\a\Desktop\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.deps.json
 C:\Users\a\Desktop\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.dll
 C:\Users\a\Desktop\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.pdb
@@ -94,3 +75,22 @@ C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInfo
 C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2\obj\Debug\netstandard2.0\SA2.dll
 C:\Users\Luc_5\Desktop\SA2 (3)\SA2\SA2\obj\Debug\netstandard2.0\SA2.pdb
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.deps.json
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\bin\Debug\netstandard2.0\SA2.pdb
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\BiometriaPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\CadastroUsuarioPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\ConcluidoPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\DadosPessoaisPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\DocumentoPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\EnderecoPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\IdentificacaoPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\Views\RendaPage.xaml.g.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInfoInputs.cache
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInfo.cs
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.dll
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.pdb

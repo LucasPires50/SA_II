@@ -43,10 +43,10 @@
                    Margin="0,30,0,0"/>
 
                 <Picker Title="Selecione seu Sexo" 
-                    ItemsSource="{Binding ClienteModel}" 
-                    ItemDisplayBinding="{Binding Sexo_Model}"
-                    SelectedItem="{Binding Selected_sexo}"
-                    HorizontalOptions="Center"
+                   ItemsSource="{Binding ClienteModel}" 
+                   ItemDisplayBinding="{Binding Sexo_Model}"
+                   SelectedItem="{Binding Selected_sexo}"
+                   HorizontalOptions="Center"
                    VerticalOptions="CenterAndExpand"
                    FontSize="20"
                    WidthRequest="450"
@@ -54,9 +54,9 @@
                    Margin="0,10,0,0"/>
 
                 <DatePicker x:Name="_data_de_nascimento"
-                        Format="dd/MM/yyyy" 
-                        BindingContext="{x:Reference _data_de_nascimento}" 
-                        HorizontalOptions="Center"
+                   Format="dd/MM/yyyy" 
+                   Date="{Binding Data_De_Nascimento}" 
+                   HorizontalOptions="Center"
                    VerticalOptions="CenterAndExpand"
                    FontSize="20"
                    WidthRequest="450"

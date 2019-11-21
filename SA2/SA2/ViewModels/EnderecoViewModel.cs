@@ -53,7 +53,7 @@ namespace SA2.ViewModels
             set { SetProperty<string>(ref _cidade, value); }
         }
 
-        public IList<ClienteModel> clienteModels { get { return Cidade_Model_List.clienteModels; } }
+        public IList<ClienteModel> ClienteModels { get { return Cidade_Model_List.ClienteModels; } }
 
 
         ClienteModel selected_cidade;
@@ -130,17 +130,17 @@ namespace SA2.ViewModels
                 return false;
 
             }
-           /* if (String.IsNullOrEmpty(Cidade))
+            if (Selected_cidade == null)
             {
                 _pagina.DisplayAlert("Atenção", "Selecione sua cidade", "Ok");
                 return false;
             }
 
-            if (String.IsNullOrEmpty(UF))
+            if (Selected_UF == null)
             {
                 _pagina.DisplayAlert("Atenção", "Selecione sua a UF", "Ok");
                 return false;
-            }*/
+            }
 
             if (String.IsNullOrEmpty(Numero))
             {

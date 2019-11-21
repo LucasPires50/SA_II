@@ -64,6 +64,8 @@ namespace SA2.ViewModels
             }
         }
 
+        DateTime dataEmissaoMinima = DateTime.Now.AddYears(-10);
+
         private DateTime _data_emissao;
         public DateTime Data_Emissao
         {
@@ -93,15 +95,15 @@ namespace SA2.ViewModels
                 return false;
 
             }
-            /*if (String.IsNullOrEmpty(UF))
+            if (Selected_UF == null)
             {
                 _pagina.DisplayAlert("Atenção", "Selecione a UF", "Ok");
                 return false;
-            }*/
+            }
 
-            if (Data_Emissao != DateTime.Now)
+            if (Data_Emissao < dataEmissaoMinima)
             {
-                _pagina.DisplayAlert("Atenção", "Data superour a atual", "Ok");
+                _pagina.DisplayAlert("Atenção", "Data incorreta", "Ok");
                 return false;
             }
             return true;

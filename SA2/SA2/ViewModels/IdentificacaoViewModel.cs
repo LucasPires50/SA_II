@@ -84,12 +84,12 @@ namespace SA2.ViewModels
 
             }
 
-            /*if (String.IsNullOrEmpty(Sexo))
+            if (Selected_sexo == null)
             {
-                _pagina.DisplayAlert("Atenção", "Escolha um opção", "Ok");
+                _pagina.DisplayAlert("Atenção", "Escolha um opção sexo", "Ok");
                 return false;
 
-            }*/
+            }
 
             if (String.IsNullOrEmpty(Telefone_Celular))
             {
@@ -97,9 +97,15 @@ namespace SA2.ViewModels
                 return false;
 
             }
-            if (Data_De_Nascimento == dataNascimentoMinima)
+            if (Telefone_Celular.Length <= 7 || Telefone_Celular.Length >= 11)
             {
-                _pagina.DisplayAlert("Atenção","Tem que maior de idade","Ok");
+                _pagina.DisplayAlert("Atenção", "Telefone Incorreto, tente novamente ", "Ok");
+                return false;
+
+            }
+            if (Data_De_Nascimento > dataNascimentoMinima)
+            {
+                _pagina.DisplayAlert("Atenção", "Tem que ter mais de 18 anos", "Ok");
                 return false;
             }
 
@@ -116,7 +122,7 @@ namespace SA2.ViewModels
 
             Nome = "";
             Sexo = "";
-            Data_De_Nascimento = _data_de_nascimento.Date;
+            Data_De_Nascimento = DateTime.Now;
             Telefone_Celular = "";
             ContinuarCommand = new Command(ExecuteContinuarCommand);
             VoltarCommand = new Command(ExecuteVoltarCommand);
