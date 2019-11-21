@@ -1219,7 +1219,6 @@ E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\stamp\_CopyPdbFiles
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\stamp\_GenerateJavaStubs.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\stamp\_GeneratePackageManagerJava.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\obj\Debug\81\stamp\_ResolveLibraryProjectImports.stamp
-E:\Arquivos_Versionados_GIT\SA2\SA2\SA2.Android\bin\Debug\SA2.dll.mdb
 C:\Users\a\Desktop\SA2\SA2\SA2.Android\bin\Debug\SA2.Android.dll
 C:\Users\a\Desktop\SA2\SA2\SA2.Android\bin\Debug\SA2.Android.pdb
 C:\Users\a\Desktop\SA2\SA2\SA2.Android\bin\Debug\com.companyname.apk

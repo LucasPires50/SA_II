@@ -187,7 +187,7 @@ namespace SA2.ViewModels
             cliente.Numero_Model = Numero;
             cliente.Complemento_Model = Complemento;
 
-            DocumentoPage page = new DocumentoPage(Cliente);
+            var page = new NavigationPage(new DocumentoPage(Cliente));
 
 
             if (Dados_Validados())

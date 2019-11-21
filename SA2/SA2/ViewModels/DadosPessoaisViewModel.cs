@@ -189,7 +189,7 @@ namespace SA2.ViewModels
             cliente.Escolaridade_Model = Escolaridade;
             cliente.Estado_Civil_Model = Estado_Civil;
 
-            RendaPage page = new RendaPage(Cliente);
+            var page = new NavigationPage(new RendaPage(Cliente));
 
             if (Dados_Validados())
             {

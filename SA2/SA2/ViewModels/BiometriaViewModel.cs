@@ -116,7 +116,7 @@ namespace SA2.ViewModels
             cliente.Comprovante_Residencia_Model = Comprovante_Residencia;
             cliente.Valor_Renda_Model = Valor_Da_Renda;
 
-            ConcluidoPage page = new ConcluidoPage(cliente);
+            var page = new NavigationPage(new ConcluidoPage(Cliente));
 
             if (Dados_Validados())
             {

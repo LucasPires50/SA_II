@@ -99,7 +99,7 @@ namespace SA2.ViewModels
                 return false;
             }*/
 
-            if (Data_Emissao >= DateTime.Now)
+            if (Data_Emissao != DateTime.Now)
             {
                 _pagina.DisplayAlert("Atenção", "Data superour a atual", "Ok");
                 return false;
@@ -136,7 +136,7 @@ namespace SA2.ViewModels
             cliente.OrgaoEmissor_Model = Orgao_Emissor;
             cliente.Data_Emissao_Model = Data_Emissao;
 
-            DadosPessoaisPage page = new DadosPessoaisPage(Cliente);
+            var page = new NavigationPage(new DadosPessoaisPage(Cliente));
 
 
             if (Dados_Validados())

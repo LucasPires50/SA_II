@@ -87,19 +87,19 @@ namespace SA2.ViewModels
        
         private async void ExecuteEntrarCommand()
         {
-            LoginPage page = new LoginPage(Cliente);
+            var page = new NavigationPage(new LoginPage(Cliente));
             await _navigation.PushModalAsync(page);
         }
 
         private async void ExecuteCadastrarCommand()
         {
-            CadastroUsuarioPage page = new CadastroUsuarioPage(Cliente);
+            var page = new NavigationPage(new CadastroUsuarioPage(Cliente));
             await _navigation.PushModalAsync(page);
         }
 
         private async void ExecuteContinuarCommand()
         {
-            IdentificacaoPage page = new IdentificacaoPage(Cliente);
+            var page = new NavigationPage(new IdentificacaoPage(Cliente));
             await _navigation.PushModalAsync(page);
         }
 

@@ -126,12 +126,13 @@ namespace SA2.ViewModels
         {
             ClienteModel cliente = new ClienteModel();
 
+            var page = new NavigationPage(new EnderecoPage(Cliente));
+
             cliente.Nome_Model = Nome;
             cliente.Sexo_Model = Sexo;
             cliente.DataNascimento_Model = Data_De_Nascimento;
             cliente.Telefone_Celular_Model = Telefone_Celular;
 
-            EnderecoPage page = new EnderecoPage(Cliente);
 
 
             if (Dados_Validados())

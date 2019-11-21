@@ -19,25 +19,25 @@ namespace SA2.ViewModels
             set { SetProperty<string>(ref mensagemRenda, value); }
         }
 
-        private double _valor_da_renda;
-        public double Valor_Da_Renda
+        private string _valor_da_renda;
+        public string Valor_Da_Renda
         {
             get { return _valor_da_renda; }
-            set { SetProperty<double>(ref _valor_da_renda, value); }
+            set { SetProperty<string>(ref _valor_da_renda, value); }
         }
 
-        private double _valor_limite_desejado;
-        public double Valor_Limite_Desejado
+        private string _valor_limite_desejado;
+        public string Valor_Limite_Desejado
         {
             get { return _valor_limite_desejado; }
-            set { SetProperty<double>(ref _valor_limite_desejado, value); }
+            set { SetProperty<string>(ref _valor_limite_desejado, value); }
         }
 
-        private double _dia_vencimento_fatura;
-        public double Dia_Vencimento_Fatura
+        private string _dia_vencimento_fatura;
+        public string Dia_Vencimento_Fatura
         {
             get { return _dia_vencimento_fatura; }
-            set { SetProperty<double>(ref _dia_vencimento_fatura, value); }
+            set { SetProperty<string>(ref _dia_vencimento_fatura, value); }
         }
 
         public IList<ClienteModel> ClienteModel { get { return Vencimento_Fatura_Model_List.ClienteModel; } }
@@ -58,21 +58,21 @@ namespace SA2.ViewModels
         }
         private bool Dados_Validados()
         {
-            if (Valor_Da_Renda > 0)
+            if (string.IsNullOrEmpty(Valor_Da_Renda))
             {
                 _pagina.DisplayAlert("Atenção", "Preencha o campo valor da renda", "OK");
                 return false;
 
             }
 
-            if (Valor_Limite_Desejado > 0)
+            if (string.IsNullOrEmpty(Valor_Limite_Desejado))
             {
                 _pagina.DisplayAlert("Atenção", "Preencha o campo limite desejado", "Ok");
                 return false;
 
             }
 
-            if (Dia_Vencimento_Fatura != 0)
+            if (string.IsNullOrEmpty(Dia_Vencimento_Fatura))
             {
                 _pagina.DisplayAlert("Atenção", "Escolha uma data de vencimento", "Ok");
                 return false;
@@ -91,9 +91,9 @@ namespace SA2.ViewModels
 
             Cliente = cliente;
 
-            Valor_Da_Renda = 0;
-            Valor_Limite_Desejado = 0;
-            Dia_Vencimento_Fatura = 0;
+            Valor_Da_Renda = "";
+            Valor_Limite_Desejado = "";
+            Dia_Vencimento_Fatura = "";
             ContinuarCommand = new Command(ExecuteContinuarCommand);
             VoltarCommand = new Command(ExecuteVoltarCommand);
         }
@@ -106,14 +106,14 @@ namespace SA2.ViewModels
             cliente.ValorLimite_Model = Valor_Limite_Desejado;
             cliente.Dia_Vencimento_Fatura_Model = Dia_Vencimento_Fatura;
 
-            BiometriaPage page = new BiometriaPage(Cliente);
+            var page = new NavigationPage(new BiometriaPage(Cliente));
 
             if (Dados_Validados())
             {
 
-                Valor_Da_Renda = 0;
-                Valor_Limite_Desejado = 0;
-                Dia_Vencimento_Fatura = 0;
+                Valor_Da_Renda = "";
+                Valor_Limite_Desejado = "";
+                Dia_Vencimento_Fatura = "";
                 await _navigation.PushModalAsync(page);
             }
         }

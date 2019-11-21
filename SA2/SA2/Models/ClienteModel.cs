@@ -42,10 +42,10 @@ namespace SA2.Models
         public string Estado_Civil_Model { get; set; }
 
         // Renda
-        public double Valor_Da_Renda_Model { get; set; }
-        public double ValorLimite_Model { get; set; }
+        public string Valor_Da_Renda_Model { get; set; }
+        public string ValorLimite_Model { get; set; }
 
-        public double Dia_Vencimento_Fatura_Model { get; set; }
+        public string Dia_Vencimento_Fatura_Model { get; set; }
 
         // Biometria
         public ImageSource Selfie_Model { get; set; }

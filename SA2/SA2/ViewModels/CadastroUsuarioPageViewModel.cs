@@ -96,7 +96,7 @@ namespace SA2.ViewModels
             cliente.CPF_Model = Cpf;
             cliente.Senha_Model = Senha;
 
-            IdentificacaoPage page = new IdentificacaoPage(Cliente);
+            var page = new NavigationPage(new IdentificacaoPage(Cliente));
 
             if (Dados_Validados())
             {

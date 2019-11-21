@@ -81,7 +81,7 @@ namespace SA2.ViewModels
 
             private async void ExecuteLogarCommand()
         {
-            ConcluidoPage page = new ConcluidoPage(Cliente);
+            var page = new NavigationPage(new ConcluidoPage(Cliente));
 
             if (Dados_Validados())
             {
