@@ -6,11 +6,6 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Button Text="Voltar"
-                    Command="{Binding VoltarCommand}"
-                    VerticalOptions="StartAndExpand"
-                    HorizontalOptions="Fill"
-                    BackgroundColor="GreenYellow"/>
 
                 <Image Source="padlock.png"
                    HorizontalOptions="CenterAndExpand"

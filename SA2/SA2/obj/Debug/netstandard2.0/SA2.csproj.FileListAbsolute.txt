@@ -94,3 +94,4 @@ E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.AssemblyInf
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\XamlC.stamp
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.dll
 E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.pdb
+E:\Arquivos_Versionados_GIT\SA2\SA2\SA2\obj\Debug\netstandard2.0\SA2.csprojAssemblyReference.cache

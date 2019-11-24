@@ -9,13 +9,9 @@
     <ContentPage.Content>
 
         <ScrollView>
-        <StackLayout>
-            <Button Text="Voltar"
-                    Command="{Binding VoltarCommand}"
-                    VerticalOptions="Start"
-                    HorizontalOptions="Start"/>
+            <StackLayout>
 
-            <Image Source="love.png"
+                <Image Source="love.png"
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="Center"
                    WidthRequest="250"

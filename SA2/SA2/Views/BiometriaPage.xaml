@@ -26,107 +26,99 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Button 
-                Text="Voltar"
-                Command="{Binding VoltarCommand}"
-                VerticalOptions="StartAndExpand"
-                HorizontalOptions="Start"
-               Grid.ColumnSpan="4"
-               Grid.Row="0"/>
-
         <Label
             Text="{Binding MensagemDigitalizar}"
-                HorizontalOptions="Center"
+            HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
             Margin="0,50,0,0"
             FontSize="20"
             TextColor="Black"
             LineBreakMode="NoWrap"
-               Grid.ColumnSpan="4"
-               Grid.Row="0"/>
+            Grid.ColumnSpan="4"
+            Grid.Row="0"/>
 
         <Button 
-                    Text="Selfie"
-                    Command="{Binding TirarFoto}"
-                Grid.Row="2"
-                    HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand"
-                    TextColor="White"
-                    Font="20"
-                    WidthRequest="200"
-                    HeightRequest="60"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#21DD11"/>
+            Text="Selfie"
+            Command="{Binding TirarFoto_Selfie}"
+            Grid.Row="2"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            TextColor="White"
+            Font="20"
+            WidthRequest="200"
+            HeightRequest="60"
+            Grid.ColumnSpan="2"
+            BackgroundColor="#21DD11"/>
 
         <Button 
-                    Text="RG/CNH"
-                    Command="{Binding TirarFotoRG_CNH}"
-                Grid.Row="3"
-                    HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand"
-                    TextColor="White"
-                    Font="20"
-                    WidthRequest="200"
-                    HeightRequest="60"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#21DD11"/>
+           Text="RG/CNH"
+           Command="{Binding TirarFotoRG_CNH}"
+           Grid.Row="3"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"
+           TextColor="White"
+           Font="20"
+           WidthRequest="200"
+           HeightRequest="60"
+           Grid.ColumnSpan="2"
+           BackgroundColor="#21DD11"/>
 
         <Button 
-                    Text="Residência"
-                    Command="{Binding TirarFotoComprovante_Residencia}"
+                Text="Residência"
+                Command="{Binding TirarFotoComprovante_Residencia}"
                 Grid.Row="4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand"
-                    TextColor="White"
-                    Font="20"
-                    WidthRequest="200"
-                    HeightRequest="60"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#21DD11"/>
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="White"
+                Font="20"
+                WidthRequest="200"
+                HeightRequest="60"
+                Grid.ColumnSpan="2"
+                BackgroundColor="#21DD11"/>
 
         <Button 
-                    Text="Renda"
-                    Command="{Binding TirarFotoValor_Da_Renda}"
+                Text="Renda"
+                Command="{Binding TirarFotoValor_Da_Renda}"
                 Grid.Row="5"
-                    HorizontalOptions="Center"
-                    VerticalOptions="CenterAndExpand"
-                    TextColor="White"
-                    Font="20"
-                    WidthRequest="200"
-                    HeightRequest="60"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#21DD11"/>
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="White"
+                Font="20"
+                WidthRequest="200"
+                HeightRequest="60"
+                Grid.ColumnSpan="2"
+                BackgroundColor="#21DD11"/>
 
         <Image 
-                   x:Name="Selfie"
-                   Source="{Binding Selfie}"
-                   Aspect="AspectFit"
+                x:Name="Selfie"
+                Source="{Binding Selfie}"
+                Aspect="AspectFit"
                 Grid.Row="2"
                 Grid.Column="2"/>
 
         <Image 
-                   x:Name="Rg_Cnh"
-                   Source="{Binding Rg_Ou_CNH}"
-                   Aspect="AspectFit"
+                x:Name="Rg_Cnh"
+                Source="{Binding Rg_Ou_CNH}"
+                Aspect="AspectFit"
                 Grid.Row="3"
                 Grid.Column="2"/>
 
         <Image 
-                   x:Name="Comprovante_Residencia"
-                   Source="{Binding Comprovante_Residencia}"
-                   Aspect="AspectFit"
+                x:Name="Comprovante_Residencia"
+                Source="{Binding Comprovante_Residencia}"
+                Aspect="AspectFit"
                 Grid.Row="4"
                 Grid.Column="2"/>
 
         <Image 
-                   x:Name="Valor_Da_Renda"
-                   Source="{Binding Valor_Da_Renda}"
-                   Aspect="AspectFit"
+                x:Name="Valor_Da_Renda"
+                Source="{Binding Valor_Da_Renda}"
+                Aspect="AspectFit"
                 Grid.Row="5"
                 Grid.Column="2"/>
 
         <Button 
-                Text="Continuar" Command="{Binding ContinuarCommand}"
+                Text="Enviar para análise" Command="{Binding ContinuarCommand}"
             Grid.Row="6"
             Grid.ColumnSpan="4"
                     HorizontalOptions="Center"

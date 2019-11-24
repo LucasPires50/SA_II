@@ -101,7 +101,7 @@ namespace SA2.ViewModels
                 return false;
             }
 
-            if (Data_Emissao < dataEmissaoMinima)
+            if (Data_Emissao > dataEmissaoMinima)
             {
                 _pagina.DisplayAlert("Atenção", "Data incorreta", "Ok");
                 return false;

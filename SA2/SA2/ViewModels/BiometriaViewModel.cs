@@ -47,41 +47,9 @@ namespace SA2.ViewModels
             set { SetProperty<ImageSource>(ref _valor_da_renda, value); }
         }
 
-        private bool Dados_Validados()
-        {
-            if (Selfie != null)
-            {
-                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "OK");
-                return false;
-
-            }
-
-            if (Rg_Ou_CNH != null)
-            {
-                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "Ok");
-                return false;
-
-            }
-
-            if (Comprovante_Residencia != null)
-            {
-                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "Ok");
-                return false;
-
-            }
-            if (Valor_Da_Renda != null)
-            {
-                _pagina.DisplayAlert("Atenção", "Campo está sem foto", "Ok");
-                return false;
-
-            }
-
-            return true;
-        }
-
         public ICommand ContinuarCommand { get; }
 
-        public ICommand TirarFoto { get; }
+        public ICommand TirarFoto_Selfie { get; }
 
         public ICommand TirarFotoRG_CNH { get; }
 
@@ -94,38 +62,65 @@ namespace SA2.ViewModels
 
             Cliente = cliente;
 
-            Selfie = "";
-            Rg_Ou_CNH = "";
-            Comprovante_Residencia = "";
-            Valor_Da_Renda = "";
+            Selfie = null;
+            Rg_Ou_CNH = null;
+            Comprovante_Residencia = null;
+            Valor_Da_Renda = null;
             ContinuarCommand = new Command(ExecuteContinuarCommand);
             VoltarCommand = new Command(ExecuteVoltarCommand);
-            TirarFoto = new Command(ExecuteTirarFoto);
+            TirarFoto_Selfie = new Command(ExecuteTirarFoto_Selfie);
             TirarFotoRG_CNH = new Command(ExecuteTirarFotoRG_CNH);
-            TirarFotoComprovante_Residencia = new Command(ExecuteTirarFotoValor_Da_Renda);
-            TirarFotoValor_Da_Renda = new Command(ExecuteTirarValor_Da_Renda);
+            TirarFotoComprovante_Residencia = new Command(ExecuteTirarFoto_Comp_Residencia);
+            TirarFotoValor_Da_Renda = new Command(ExecuteTirarFotoValor_Da_Renda);
 
+        }
+
+        private bool Dados_Validados()
+        {
+            if (Selfie == null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo Selfie,  está sem foto", "OK");
+                return false;
+
+            }
+
+            if (Rg_Ou_CNH == null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo RG/CPF, está sem foto", "Ok");
+                return false;
+
+            }
+
+            if (Comprovante_Residencia == null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo comprovante de residencia, está sem foto", "Ok");
+                return false;
+
+            }
+            if (Valor_Da_Renda == null)
+            {
+                _pagina.DisplayAlert("Atenção", "Campo valor da renda, está sem foto", "Ok");
+                return false;
+
+            }
+
+            return true;
         }
 
         private async void ExecuteContinuarCommand()
         {
             ClienteModel cliente = new ClienteModel();
 
-            cliente.Selfie_Model = Selfie;
-            cliente.Rg_Ou_CNH_Model = Rg_Ou_CNH;
-            cliente.Comprovante_Residencia_Model = Comprovante_Residencia;
-            cliente.Valor_Renda_Model = Valor_Da_Renda;
 
             var page = new NavigationPage(new ConcluidoPage(Cliente));
 
             if (Dados_Validados())
             {
 
-
-                Selfie = "";
-                Rg_Ou_CNH = "";
-                Comprovante_Residencia = "";
-                Valor_Da_Renda = "";
+                cliente.Selfie_Model = Selfie;
+                cliente.Rg_Ou_CNH_Model = Rg_Ou_CNH;
+                cliente.Comprovante_Residencia_Model = Comprovante_Residencia;
+                cliente.Valor_Renda_Model = Valor_Da_Renda;
                 await _navigation.PushModalAsync(page);
             }
 
@@ -137,7 +132,8 @@ namespace SA2.ViewModels
             await _navigation.PushModalAsync(page);
         }
 
-        private async void ExecuteTirarFoto()
+        
+        private async void ExecuteTirarFoto_Selfie()
         {
             await CrossMedia.Current.Initialize();
 
@@ -193,7 +189,7 @@ namespace SA2.ViewModels
             });
         }
 
-        private async void ExecuteTirarFotoValor_Da_Renda()
+        private async void ExecuteTirarFoto_Comp_Residencia()
         {
             await CrossMedia.Current.Initialize();
 
@@ -221,7 +217,7 @@ namespace SA2.ViewModels
             });
         }
 
-        private async void ExecuteTirarValor_Da_Renda()
+        private async void ExecuteTirarFotoValor_Da_Renda()
         {
             await CrossMedia.Current.Initialize();
 

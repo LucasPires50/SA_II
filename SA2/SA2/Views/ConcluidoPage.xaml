@@ -8,10 +8,6 @@
              Title="Concluído">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Voltar"
-                    Command="{Binding VoltarCommand}"
-                    VerticalOptions="Start"
-                    HorizontalOptions="Start"/>
 
             <Image Source="deal.png"
                    HorizontalOptions="CenterAndExpand"

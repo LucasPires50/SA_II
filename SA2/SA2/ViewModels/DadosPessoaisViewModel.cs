@@ -142,18 +142,19 @@ namespace SA2.ViewModels
                 _pagina.DisplayAlert("Atenção", "Selecione sua profissão", "Ok");
                 return false;
             }
-
-            if (Selected_estado_civil == null)
+            if (Selected_escolaridade == null)
             {
                 _pagina.DisplayAlert("Atenção", "Selecione sua escolaridade", "Ok");
                 return false;
             }
 
-            if (Selected_escolaridade == null)
+            if (Selected_estado_civil == null)
             {
-                _pagina.DisplayAlert("Atenção", "Selecione sue estado civil", "Ok");
+                _pagina.DisplayAlert("Atenção", "Selecione seu estado civil", "Ok");
                 return false;
             }
+
+
             return true;
         }
 
