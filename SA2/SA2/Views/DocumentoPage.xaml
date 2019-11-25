@@ -81,7 +81,7 @@
                     WidthRequest="450"
                     HeightRequest="60"
                     Margin="0,0,0,30"
-                    BackgroundColor="#21DD11"/>
+                    BackgroundColor="#0F6B60"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

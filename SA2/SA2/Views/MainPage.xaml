@@ -16,7 +16,7 @@
                 Text="{Binding MensagemDesBank}"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
-                TextColor="#FB33FF00"
+                TextColor="#0F6B60"
                 FontSize="50"
                 />
                 <Label 
@@ -35,15 +35,15 @@
                     WidthRequest="450"
                     HeightRequest="60"
                     Margin="0,120,0,0"
-                    BackgroundColor="#21DD11"/>
+                    BackgroundColor="#0F6B60"/>
                 <Button x:Name="btnCadastrar" Text="Cadastrar" Command="{Binding CadastrarCommand}"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"
-                    TextColor="#21DD11"
+                    TextColor="#0F6B60"
                     Font="25"
                     BorderRadius="3"
                     BorderWidth="3"
-                    BorderColor="#21DD11"
+                    BorderColor="#0F6B60"
                     WidthRequest="450"
                     HeightRequest="60"
                     Margin="0,0,0,40"
