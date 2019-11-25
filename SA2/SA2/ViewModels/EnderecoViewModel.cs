@@ -117,6 +117,13 @@ namespace SA2.ViewModels
 
             }
 
+            if (Cep.Length < 8 || Cep.Length > 8)
+            {
+                _pagina.DisplayAlert("Atenção", "Cep está incorreto", "Ok");
+                return false;
+
+            }
+
             if (String.IsNullOrEmpty(Logradouro))
             {
                 _pagina.DisplayAlert("Atenção", "Preencha o campo Logradouro", "Ok");

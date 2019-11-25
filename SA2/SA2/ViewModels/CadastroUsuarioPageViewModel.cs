@@ -57,6 +57,12 @@ namespace SA2.ViewModels
                 return false;
                 
             }
+            if (Cpf.Length < 11 || Cpf.Length > 11)
+            {
+                _pagina.DisplayAlert("Atenção", "CPF está incorreto", "Ok");
+                return false;
+
+            }
 
             if (String.IsNullOrEmpty(Senha))
             {
@@ -115,9 +121,6 @@ namespace SA2.ViewModels
             MainPage page = new MainPage();
             await _navigation.PushModalAsync(page);
         }
-
-
-
 
     }
 
